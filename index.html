@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Última Misa — Despedida comunitaria al Indio Solari</title>
+<meta name="description" content="Galería comunitaria de la despedida al Indio Solari. Avellaneda, 7 de junio de 2026. Subí tu foto o video.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --negro:    #080808;
+  --carbon:   #111;
+  --grafito:  #1a1a1a;
+  --humo:     #2c2c2c;
+  --ceniza:   #666;
+  --plata:    #999;
+  --crema:    #e8e0d0;
+  --blanco:   #f5f0e8;
+  --rojo:     #9b1c1c;
+  --rojo-vivo:#c0392b;
+  --sangre:   #6b0f0f;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--negro);
+  color: var(--crema);
+  font-family: 'Lora', serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--negro);
+}
+
+/* Firma del fondo — líneas diagonales muy sutiles, como vinilo rayado */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.012) 40px,
+    rgba(255,255,255,0.012) 41px
+  );
+  pointer-events: none;
+}
+
+/* Mancha de color desde abajo */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(155,28,28,0.18), transparent);
+  pointer-events: none;
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.hero-anio {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(6rem, 20vw, 16rem);
+  line-height: 0.85;
+  color: var(--grafito);
+  letter-spacing: 0.05em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.hero-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--rojo-vivo);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  color: var(--blanco);
+  margin-bottom: 0.3em;
+}
+
+.hero-titulo span {
+  display: block;
+  color: var(--rojo-vivo);
+  font-size: 0.45em;
+  letter-spacing: 0.15em;
+}
+
+.hero-sub {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--plata);
+  margin-top: 1.5rem;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-fechas {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.fecha-item {
+  text-align: center;
+}
+
+.fecha-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  color: var(--blanco);
+  line-height: 1;
+  display: block;
+}
+
+.fecha-txt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ceniza);
+}
+
+.fecha-sep {
+  color: var(--rojo);
+  font-family: 'Lora', serif;
+  font-size: 1.8rem;
+  opacity: 0.6;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ceniza);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: latido 2.5s ease-in-out infinite;
+  z-index: 2;
+}
+
+.hero-scroll::after { content: '↓'; font-size: 1rem; }
+
+@keyframes latido {
+  0%, 100% { opacity: 0.3; transform: translateX(-50%) translateY(0); }
+  50% { opacity: 0.9; transform: translateX(-50%) translateY(4px); }
+}
+
+/* ── INTRO ── */
+.intro {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--humo);
+}
+
+.intro p {
+  font-size: 1.05rem;
+  color: var(--crema);
+  line-height: 1.9;
+}
+
+.intro p + p { margin-top: 1rem; }
+
+.intro-destacado {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--blanco);
+  border-left: 2px solid var(--rojo);
+  padding-left: 1.2rem;
+  text-align: left;
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+
+/* ── SECCIÓN GENÉRICA ── */
+.seccion {
+  padding: 4rem 1.5rem 5rem;
+  border-bottom: 1px solid var(--humo);
+}
+
+.seccion-header {
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+}
+
+.seccion-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rojo-vivo);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--blanco);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.seccion-linea {
+  width: 40px;
+  height: 2px;
+  background: var(--rojo);
+  margin-top: 1rem;
+}
+
+/* ── GALERÍA COMUNITARIA ── */
+.galeria-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  columns: 3;
+  column-gap: 8px;
+}
+
+@media (max-width: 900px) { .galeria-grid { columns: 2; } }
+@media (max-width: 560px) { .galeria-grid { columns: 1; } }
+
+.galeria-item {
+  break-inside: avoid;
+  margin-bottom: 8px;
+  background: var(--grafito);
+  border: 1px solid var(--humo);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.galeria-item:hover { border-color: var(--rojo); }
+
+/* Embed container — altura flexible */
+.embed-container {
+  width: 100%;
+  min-height: 200px;
+  position: relative;
+}
+
+/* Instagram / TikTok / Twitter iframes */
+.embed-container iframe,
+.embed-container blockquote {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Imagen directa */
+.embed-imagen {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Pie de cada item */
+.item-footer {
+  padding: 0.6rem 0.8rem;
+  border-top: 1px solid var(--humo);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.item-autor {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--rojo-vivo);
+  letter-spacing: 0.1em;
+}
+
+.item-desc {
+  font-size: 0.8rem;
+  color: var(--plata);
+  line-height: 1.4;
+}
+
+.item-red {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.55rem;
+  color: var(--ceniza);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Error de embed */
+.embed-error {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--ceniza);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  line-height: 1.6;
+  border: 1px dashed var(--humo);
+  margin: 0.5rem;
+}
+
+.embed-error a {
+  color: var(--rojo-vivo);
+  text-decoration: none;
+}
+
+/* ── ESTADO VACÍO ── */
+.galeria-vacia {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--ceniza);
+}
+
+.galeria-vacia .icono { font-size: 3rem; margin-bottom: 1rem; opacity: 0.4; }
+
+.galeria-vacia p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+/* ── FORMULARIO DE ENVÍO ── */
+.formulario-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.campo {
+  margin-bottom: 1.5rem;
+}
+
+.campo label {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--plata);
+  margin-bottom: 0.5rem;
+}
+
+.campo label span {
+  color: var(--rojo-vivo);
+  margin-left: 0.3rem;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+  width: 100%;
+  background: var(--grafito);
+  border: 1px solid var(--humo);
+  color: var(--crema);
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+  border-color: var(--rojo-vivo);
+}
+
+.campo textarea { resize: vertical; min-height: 80px; }
+
+.campo select option { background: var(--grafito); }
+
+.aviso-privado {
+  background: rgba(155,28,28,0.1);
+  border: 1px solid var(--sangre);
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--plata);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.aviso-privado strong {
+  color: var(--rojo-vivo);
+  display: block;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn-enviar {
+  width: 100%;
+  background: var(--rojo);
+  color: var(--blanco);
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-enviar:hover { background: var(--rojo-vivo); }
+
+.nota-aprobacion {
+  margin-top: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--ceniza);
+  text-align: center;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
+/* ── COMO SUBIR ── */
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.paso {
+  padding: 1.5rem;
+  border: 1px solid var(--humo);
+  background: var(--grafito);
+}
+
+.paso-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--rojo);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.paso-titulo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blanco);
+  margin-bottom: 0.4rem;
+}
+
+.paso-texto {
+  font-size: 0.85rem;
+  color: var(--plata);
+  line-height: 1.5;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, rgba(155,28,28,0.15) 0%, transparent 60%);
+}
+
+.footer-frase {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--crema);
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  line-height: 1.5;
+}
+
+.footer-sep {
+  width: 30px;
+  height: 1px;
+  background: var(--rojo);
+  margin: 1.5rem auto;
+}
+
+.footer-creditos {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--ceniza);
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+.footer-creditos a {
+  color: var(--plata);
+  text-decoration: none;
+  border-bottom: 1px solid var(--humo);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-creditos a:hover {
+  color: var(--blanco);
+  border-color: var(--rojo-vivo);
+}
+
+.footer-autor {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--humo);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--ceniza);
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+.footer-autor strong {
+  color: var(--plata);
+}
+
+.footer-autor a {
+  color: var(--rojo-vivo);
+  text-decoration: none;
+}
+
+/* ── CARGANDO ── */
+.cargando {
+  text-align: center;
+  padding: 3rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--ceniza);
+  letter-spacing: 0.15em;
+  animation: pulso 1.5s ease-in-out infinite;
+}
+
+@keyframes pulso {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ── CONTADOR ── */
+.contador-wrap {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contador-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: var(--rojo-vivo);
+  line-height: 1;
+}
+
+.contador-txt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--ceniza);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-anio">2026</div>
+  <div class="hero-contenido">
+    <span class="hero-eyebrow">Villa Domínico · Avellaneda · 7 de junio de 2026</span>
+    <h1 class="hero-titulo">
+      La Última
+      <span>Gran Misa</span>
+    </h1>
+    <p class="hero-sub">
+      Galería comunitaria de la despedida al Indio Solari.<br>
+      Fotos y videos de los ricoteros, para los ricoteros.
+    </p>
+    <div class="hero-fechas">
+      <div class="fecha-item">
+        <span class="fecha-num">17 ENE</span>
+        <span class="fecha-txt">Nacimiento · 1949</span>
+      </div>
+      <div class="fecha-sep">—</div>
+      <div class="fecha-item">
+        <span class="fecha-num">5 JUN</span>
+        <span class="fecha-txt">Partida · 2026</span>
+      </div>
+      <div class="fecha-sep">—</div>
+      <div class="fecha-item">
+        <span class="fecha-num">∞</span>
+        <span class="fecha-txt">Siempre ricotera</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">Desplazá</div>
+</header>
+
+<!-- ══ INTRO ══ -->
+<section class="intro">
+  <p>
+    El 5 de junio de 2026, Carlos Alberto "Indio" Solari se fue a los 77 años.
+    El domingo 7, cientos de miles de ricoteros coparon Avellaneda para darle
+    el último adiós. La fila llegó a ocho kilómetros. Quince mil personas por hora.
+    Sin un solo incidente. Como siempre.
+  </p>
+  <blockquote class="intro-destacado">
+    "Una última misa ricotera. La más grande de todas."
+  </blockquote>
+  <p>
+    Este espacio es de todos. Si estuviste en la despedida —en el velatorio,
+    en el banderazo del Obelisco, en alguna vigilia del interior—
+    tu foto o video tiene lugar acá.
+  </p>
+</section>
+
+<!-- ══ CÓMO SUBIR ══ -->
+<section class="seccion">
+  <div class="seccion-header">
+    <span class="seccion-label">¿Cómo funciona?</span>
+    <h2 class="seccion-titulo">Sumá tu momento</h2>
+    <div class="seccion-linea"></div>
+  </div>
+
+  <div class="pasos">
+    <div class="paso">
+      <div class="paso-num">01</div>
+      <div class="paso-titulo">Publicá en tu red</div>
+      <p class="paso-texto">Subí tu foto o video a Instagram, TikTok, Twitter/X o cualquier web. Que la publicación sea <strong>pública</strong>.</p>
+    </div>
+    <div class="paso">
+      <div class="paso-num">02</div>
+      <div class="paso-titulo">Copiá el link</div>
+      <p class="paso-texto">Copiá la URL del post. En Instagram: los tres puntitos → "Copiar link". En TikTok: compartir → copiar link.</p>
+    </div>
+    <div class="paso">
+      <div class="paso-num">03</div>
+      <div class="paso-titulo">Completá el formulario</div>
+      <p class="paso-texto">Pegá el link acá abajo con tu nombre y una descripción de lo que muestra.</p>
+    </div>
+    <div class="paso">
+      <div class="paso-num">04</div>
+      <div class="paso-titulo">Esperá la aprobación</div>
+      <p class="paso-texto">Cada envío pasa por una revisión antes de aparecer. En cuanto se aprueba, tu momento queda en la galería para siempre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALERÍA ══ -->
+<section class="seccion">
+  <div class="seccion-header">
+    <span class="seccion-label">La galería del pueblo ricoter</span>
+    <h2 class="seccion-titulo">Sus fotos · Sus videos</h2>
+    <div class="seccion-linea"></div>
+  </div>
+
+  <div class="contador-wrap" id="contador-wrap" style="display:none">
+    <div class="contador-num" id="contador-num">0</div>
+    <div class="contador-txt">momentos<br>compartidos</div>
+  </div>
+
+  <div id="galeria-container">
+    <div class="cargando">Cargando galería…</div>
+  </div>
+</section>
+
+<!-- ══ FORMULARIO ══ -->
+<section class="seccion" id="subir">
+  <div class="seccion-header">
+    <span class="seccion-label">Sumá la tuya</span>
+    <h2 class="seccion-titulo">Subí tu foto o video</h2>
+    <div class="seccion-linea"></div>
+  </div>
+
+  <div class="formulario-wrap">
+
+    <div class="aviso-privado">
+      <strong>⚠ Importante antes de enviar</strong>
+      Para que tu foto o video se vea correctamente en la galería, la publicación
+      debe ser <strong>pública</strong> en tu red social. Si tu cuenta o el post
+      es privado, el contenido no va a poder mostrarse y no podremos aprobarlo.
+      Facebook puede tener restricciones adicionales según tu configuración.
+    </div>
+
+    <div class="campo">
+      <label>Tu nombre o apodo</label>
+      <input type="text" id="campo-nombre" placeholder="Ej: Sopa Fiorucci" maxlength="80">
+    </div>
+
+    <div class="campo">
+      <label>Link de tu foto o video <span>*</span></label>
+      <input type="url" id="campo-link" placeholder="https://www.instagram.com/p/..." required>
+    </div>
+
+    <div class="campo">
+      <label>Red social</label>
+      <select id="campo-red">
+        <option value="instagram">Instagram</option>
+        <option value="tiktok">TikTok</option>
+        <option value="twitter">Twitter / X</option>
+        <option value="facebook">Facebook</option>
+        <option value="youtube">YouTube</option>
+        <option value="imagen">URL directa de imagen</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label>¿Qué muestra? (descripción breve)</label>
+      <textarea id="campo-desc" placeholder="Ej: La fila en el Obelisco el sábado a la noche, con banderas ricoteras y lluvia…"></textarea>
+    </div>
+
+    <div class="campo">
+      <label>¿Dónde fue? (opcional)</label>
+      <input type="text" id="campo-lugar" placeholder="Ej: Villa Domínico · Obelisco · Rosario · etc." maxlength="120">
+    </div>
+
+    <button class="btn-enviar" id="btn-enviar" onclick="enviarFormulario()">
+      MANDAR MI MOMENTO
+    </button>
+
+    <p class="nota-aprobacion">
+      Cada envío es revisado antes de aparecer en la galería. · 
+      No se publica información personal sin tu consentimiento. · 
+      El contenido es tuyo, acá solo se embede.
+    </p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p class="footer-frase">"Vivir sólo cuesta vida."</p>
+  <div class="footer-sep"></div>
+
+  <div class="footer-creditos">
+    Imágenes y videos · propiedad de cada autor · embedidos con permiso implícito de publicación pública<br>
+    Cobertura periodística · <a href="https://www.infobae.com" target="_blank">Infobae</a> · 
+    <a href="https://www.pagina12.com.ar" target="_blank">Página 12</a> · 
+    <a href="https://www.lanacion.com.ar" target="_blank">La Nación</a> · TN · Canal 26 · eltrece
+  </div>
+
+  <div class="footer-autor">
+    <strong>Una idea de <a href="https://www.instagram.com/sopaefe" target="_blank">Sopa Fiorucci</a></strong><br>
+    El slideshow interactivo y comunitario sobre la despedida del Indio nació de querer<br>
+    que cada ricoter que estuvo ahí pudiera dejar su marca en la historia.<br>
+    <a href="https://www.instagram.com/sopaefe" target="_blank">@sopaefe</a> en Instagram y Facebook · 
+    Hosteado en <a href="https://github.com/sopaefe/indio" target="_blank">github.com/sopaefe/indio</a>
+  </div>
+</footer>
+
+<!-- Scripts de embed de redes sociales -->
+<script async src="https://www.instagram.com/embed.js"></script>
+<script async src="https://platform.twitter.com/widgets.js"></script>
+<script async src="https://www.tiktok.com/embed.js"></script>
+
+<script>
+// ══ CONFIGURACIÓN ══
+const REPO = 'sopaefe/indio';
+const JSON_URL = `https://raw.githubusercontent.com/${REPO}/main/fotos.json`;
+const ISSUES_URL = `https://github.com/${REPO}/issues/new`;
+
+// ══ DETECCIÓN DE RED SOCIAL ══
+function detectarRed(url) {
+  if (!url) return 'desconocido';
+  if (url.includes('instagram.com')) return 'instagram';
+  if (url.includes('tiktok.com')) return 'tiktok';
+  if (url.includes('twitter.com') || url.includes('x.com')) return 'twitter';
+  if (url.includes('facebook.com') || url.includes('fb.com')) return 'facebook';
+  if (url.includes('youtube.com') || url.includes('youtu.be')) return 'youtube';
+  const ext = url.split('?')[0].split('.').pop().toLowerCase();
+  if (['jpg','jpeg','png','gif','webp'].includes(ext)) return 'imagen';
+  return 'otro';
+}
+
+// ══ CONSTRUIR EMBED POR RED ══
+function buildEmbed(item) {
+  const red = item.red || detectarRed(item.url);
+
+  switch(red) {
+    case 'instagram':
+      return `
+        <blockquote class="instagram-media" 
+          data-instgrm-permalink="${item.url}"
+          data-instgrm-version="14"
+          style="background:#1a1a1a;border:0;margin:0;padding:0;width:100%;">
+        </blockquote>`;
+
+    case 'twitter':
+      // Normalizar URL a twitter.com si viene de x.com
+      const twUrl = item.url.replace('x.com', 'twitter.com');
+      return `
+        <blockquote class="twitter-tweet" data-theme="dark">
+          <a href="${twUrl}"></a>
+        </blockquote>`;
+
+    case 'tiktok': {
+      // Extraer video ID de la URL de TikTok
+      const ttMatch = item.url.match(/video\/(\d+)/);
+      const ttId = ttMatch ? ttMatch[1] : '';
+      if (ttId) {
+        return `<blockquote class="tiktok-embed"
+          cite="${item.url}"
+          data-video-id="${ttId}"
+          style="max-width:100%;min-width:100%;border:none;background:#1a1a1a;">
+          <section></section>
+        </blockquote>`;
+      }
+      return embedError(item.url, 'TikTok');
+    }
+
+    case 'facebook':
+      return `
+        <div class="fb-post" 
+          data-href="${item.url}" 
+          data-width="500"
+          data-show-text="true">
+        </div>
+        <div id="fb-root"></div>
+        <script>
+          if(!window._fbLoaded){
+            window._fbLoaded=true;
+            var js=document.createElement('script');
+            js.src='https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v19.0';
+            document.head.appendChild(js);
+          } else if(window.FB){ FB.XFBML.parse(); }
+        <\/script>`;
+
+    case 'youtube': {
+      let ytId = '';
+      const ytMatch = item.url.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+      if (ytMatch) ytId = ytMatch[1];
+      if (ytId) {
+        return `<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe src="https://www.youtube.com/embed/${ytId}" 
+            style="position:absolute;inset:0;width:100%;height:100%;border:none;"
+            allowfullscreen loading="lazy"></iframe>
+        </div>`;
+      }
+      return embedError(item.url, 'YouTube');
+    }
+
+    case 'imagen':
+      return `<img class="embed-imagen" src="${item.url}" 
+        alt="${item.descripcion || 'Foto de la despedida'}"
+        loading="lazy"
+        onerror="this.parentElement.innerHTML='${embedError(item.url, 'imagen').replace(/'/g, "\\'")}'">`;
+
+    default:
+      return embedError(item.url, red);
+  }
+}
+
+function embedError(url, red) {
+  return `<div class="embed-error">
+    No se puede mostrar este contenido.<br>
+    La cuenta o publicación puede ser privada,<br>
+    o la red no permite el embed.<br><br>
+    <a href="${url}" target="_blank" rel="noopener">Ver en ${red} →</a>
+  </div>`;
+}
+
+function iconoRed(red) {
+  const iconos = {
+    instagram: '📷 Instagram',
+    tiktok: '🎵 TikTok',
+    twitter: '🐦 Twitter / X',
+    facebook: '👥 Facebook',
+    youtube: '▶️ YouTube',
+    imagen: '🖼 Imagen',
+    otro: '🔗 Web'
+  };
+  return iconos[red] || '🔗 Web';
+}
+
+// ══ RENDERIZAR GALERÍA ══
+function renderGaleria(items) {
+  const container = document.getElementById('galeria-container');
+
+  if (!items || items.length === 0) {
+    container.innerHTML = `
+      <div class="galeria-vacia">
+        <div class="icono">🕯</div>
+        <p>
+          Todavía no hay fotos en la galería.<br><br>
+          Sé el primero en compartir tu momento<br>
+          de la despedida del Indio.
+        </p>
+      </div>`;
+    return;
+  }
+
+  // Mostrar contador
+  const cw = document.getElementById('contador-wrap');
+  cw.style.display = 'flex';
+  document.getElementById('contador-num').textContent = items.length;
+
+  const grid = document.createElement('div');
+  grid.className = 'galeria-grid';
+
+  items.forEach(item => {
+    const red = item.red || detectarRed(item.url);
+    const div = document.createElement('div');
+    div.className = 'galeria-item';
+    div.innerHTML = `
+      <div class="embed-container">
+        ${buildEmbed(item)}
+      </div>
+      <div class="item-footer">
+        ${item.autor ? `<div class="item-autor">${item.autor}</div>` : ''}
+        ${item.descripcion ? `<div class="item-desc">${item.descripcion}</div>` : ''}
+        <div class="item-red">${iconoRed(red)}${item.lugar ? ' · ' + item.lugar : ''}</div>
+      </div>`;
+    grid.appendChild(div);
+  });
+
+  container.innerHTML = '';
+  container.appendChild(grid);
+
+  // Re-procesar embeds de redes sociales
+  setTimeout(() => {
+    if (window.instgrm) window.instgrm.Embeds.process();
+    if (window.twttr) window.twttr.widgets.load();
+  }, 500);
+}
+
+// ══ CARGAR DESDE GitHub ══
+async function cargarGaleria() {
+  try {
+    const res = await fetch(JSON_URL + '?t=' + Date.now());
+    if (!res.ok) throw new Error('No se pudo cargar fotos.json');
+    const data = await res.json();
+    renderGaleria(data);
+  } catch(e) {
+    // Si el repo no existe aún o fotos.json está vacío, mostrar estado vacío
+    renderGaleria([]);
+  }
+}
+
+// ══ FORMULARIO → ISSUE DE GITHUB ══
+function enviarFormulario() {
+  const nombre = document.getElementById('campo-nombre').value.trim();
+  const link   = document.getElementById('campo-link').value.trim();
+  const red    = document.getElementById('campo-red').value;
+  const desc   = document.getElementById('campo-desc').value.trim();
+  const lugar  = document.getElementById('campo-lugar').value.trim();
+
+  if (!link) {
+    alert('Falta el link de tu foto o video.');
+    return;
+  }
+
+  const titulo = `[Foto] ${nombre || 'Anónimo'} — ${red}`;
+
+  const cuerpo = `## Nueva foto para la galería
+
+**Autor / apodo:** ${nombre || '_(no indicado)_'}
+**Red social:** ${red}
+**Link:** ${link}
+**Lugar:** ${lugar || '_(no indicado)_'}
+**Descripción:** ${desc || '_(sin descripción)_'}
+
+---
+*Enviado desde el formulario de La Última Gran Misa*
+*Para aprobar: copiar los datos al archivo \`fotos.json\` en el repo y cerrar este issue.*`;
+
+  const url = `${ISSUES_URL}?title=${encodeURIComponent(titulo)}&body=${encodeURIComponent(cuerpo)}&labels=pendiente`;
+  window.open(url, '_blank');
+}
+
+// ══ INIT ══
+cargarGaleria();
+</script>
+
+</body>
+</html>
